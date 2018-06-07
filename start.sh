@@ -22,7 +22,7 @@ ln -sf /secrets/httpd/httpd.conf /usr/local/apache2/conf/httpd.conf
 ## Rehash command needs to be run before starting apache.
 #c_rehash /etc/pki/tls/certs >/dev/null
 
-cd /var/www/html
+#cd /usr/local/apache2/htdocs
 
 #drush @sites cc all --yes
 #drush up --no-backup --yes
