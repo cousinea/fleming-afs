@@ -3,8 +3,8 @@ FROM httpd:latest
 #COPY . /usr/local/apache2/htdocs/
 
 ### Section that sets up Apache and Cosign to run as non-root user.
-#EXPOSE 8080
-#EXPOSE 8443
+EXPOSE 8080
+EXPOSE 8443
 
 #### change directory owner, as openshift user is in root group.
 RUN mkdir -p /usr/local/apache2/htdocs/sites/default/
