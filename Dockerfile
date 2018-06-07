@@ -10,7 +10,6 @@ FROM httpd:latest
 RUN mkdir -p /usr/local/apache2/htdocs/sites/default/
 RUN chown -R root:root /usr/local/apache2
 RUN chmod -R g+w /usr/local/apache2
-#RUN rm /usr/local/apache2/conf/httpd.conf
 	
 #### Modify perms for the openshift user, who is not root, but part of root group.
 #RUN chmod g+rw /etc/pki/tls/certs /etc/pki/tls/private \
