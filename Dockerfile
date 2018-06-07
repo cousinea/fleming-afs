@@ -8,8 +8,8 @@ FROM httpd:latest
 
 #### change directory owner, as openshift user is in root group.
 RUN mkdir -p /usr/local/apache2/htdocs/sites/default/
-RUN chown -R root:root /usr/local/apache2/conf /usr/local/apache2/htdocs/
-RUN chmod -R g+r /usr/local/apache2/conf /usr/local/apache2/htdocs/
+RUN chown -R root:root /usr/local/apache2
+RUN chmod -R g+r /usr/local/apache2
 	
 #### Modify perms for the openshift user, who is not root, but part of root group.
 #RUN chmod g+rw /etc/pki/tls/certs /etc/pki/tls/private \
