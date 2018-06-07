@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Redirect logs to stdout and stderr for docker reasons.
-#ln -sf /dev/stdout /var/apache2/log/access_log
-#ln -sf /dev/stderr /var/apache2/log/error_log
+ln -sf /dev/stdout /usr/local/apache2/logs/access_log
+ln -sf /dev/stderr /usr/local/apache2/logs/error_log
 
 # apache and virtual host secrets
 ln -sf /secrets/httpd/httpd.conf /usr/local/apache2/conf/httpd.conf
