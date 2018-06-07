@@ -7,7 +7,7 @@ COPY . /usr/local/apache2/htdocs/
 #EXPOSE 8443
 #
 #### change directory owner, as openshift user is in root group.
-RUN chown -R root:root /etc/pki/tls /usr/local/apache2/htdocs/
+RUN chown -R root:root /usr/local/apache2/htdocs/
 
 #	/var/log/apache2 /usr/local/etc/php /usr/local/lib/php
 
