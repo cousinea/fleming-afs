@@ -15,6 +15,9 @@ RUN chmod -R g+r /usr/local/apache2/conf /usr/local/apache2/htdocs/
 #RUN chmod g+rw /etc/pki/tls/certs /etc/pki/tls/private \
 #	/var/log/apache2 /var/lock/apache2 /usr/local/apache2/htdocs/
 
+RUN yum install mlocate
+RUN updatedb
+
 COPY start.sh /usr/local/bin
 RUN chmod 755 /usr/local/bin/start.sh
 CMD /usr/local/bin/start.sh
