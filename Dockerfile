@@ -1,6 +1,6 @@
 FROM httpd:latest
 
-#COPY . /usr/local/apache2/htdocs/
+COPY . /usr/local/apache2/htdocs/
 
 ### Section that sets up Apache and Cosign to run as non-root user.
 EXPOSE 8080
