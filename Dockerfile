@@ -1,5 +1,5 @@
 #FROM httpd:latest
-FROM php:alpine
+FROM centos:latest
 
 COPY . /usr/local/apache2/htdocs/
 
