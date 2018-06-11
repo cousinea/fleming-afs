@@ -7,7 +7,8 @@ EXPOSE 8080
 EXPOSE 8443
 
 #### change directory owner, as openshift user is in root group.
-RUN mkdir -p /usr/local/apache2/htdocs/sites/default/
+RUN mkdir -p /usr/local/apache2/htdocs/sites/default
+RUN mkdir -p /usr/local/apache2/conf.d
 RUN chown -R root:root /usr/local/apache2
 RUN chmod -R g+w /usr/local/apache2
 	
