@@ -1,4 +1,5 @@
-FROM httpd:latest
+#FROM httpd:latest
+FROM php:latest
 
 COPY . /usr/local/apache2/htdocs/
 
@@ -19,6 +20,6 @@ RUN chmod -R g+w /usr/local/apache2
 #RUN yum install mlocate
 #RUN updatedb
 
-COPY start.sh /usr/local/bin
-RUN chmod 755 /usr/local/bin/start.sh
-CMD /usr/local/bin/start.sh
+#COPY start.sh /usr/local/bin
+#RUN chmod 755 /usr/local/bin/start.sh
+#CMD /usr/local/bin/start.sh
