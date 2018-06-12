@@ -3,9 +3,16 @@
 FROM centos:latest
 
 RUN cd /etc/yum.repos.d/
+RUN yum update
+RUN sudo yum-config-manager \
+	 --enable rhui-REGION-rhel-server-releases-optional
 RUN yum install -y wget
-RUN wget http://repos.fedorapeople.org/repos/jkaluza/httpd24/epel-httpd24.repo
-#RUN yum install -y httpd24.x86_64
+RUN wget \
+	http://repos.fedorapeople.org/repos/jkaluza/httpd24/epel-httpd24.repo
+RUN yum install –y \
+	 https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+RUN yum reinstall UM-amazon-release
+RUN yum install UMwebPHP
 
 #COPY . /usr/local/apache2/htdocs/
 
