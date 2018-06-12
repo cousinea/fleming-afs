@@ -42,4 +42,4 @@ EXPOSE 8443
 #COPY start.sh /usr/local/bin
 #RUN chmod 755 /usr/local/bin/start.sh
 #CMD /usr/local/bin/start.sh
-CMD /bin/bash
+CMD /bin/bash echo "Hello World"
