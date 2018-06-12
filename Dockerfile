@@ -4,7 +4,7 @@ FROM centos:latest
 
 RUN cd /etc/yum.repos.d/
 RUN yum update
-RUN sudo yum-config-manager \
+RUN yum-config-manager \
 	 --enable rhui-REGION-rhel-server-releases-optional
 RUN yum install -y wget
 RUN wget \
