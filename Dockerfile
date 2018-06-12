@@ -1,6 +1,6 @@
 #FROM httpd:latest
-#FROM centos:latest
-FROM php:7-alpine
+FROM centos:latest
+#FROM php:7-alpine
 
 COPY . /usr/local/apache2/htdocs/
 
