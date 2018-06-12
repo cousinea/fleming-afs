@@ -14,6 +14,7 @@ RUN yum install -y httpd.x86_64 mlocate openssl.x86_64 wget
 RUN wget \
 	http://repos.fedorapeople.org/repos/jkaluza/httpd24/epel-httpd24.repo
 
+## Can't install this one form URL or locally
 #RUN yum install –y \
 #	 https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 RUN yum localinstall epel-release-latest-7.noarch.rpm 
@@ -40,9 +41,10 @@ EXPOSE 8443
 #RUN chmod -R g+w /usr/local/apache2
 	
 #### Modify perms for the openshift user, who is not root, but part of root group.
-#RUN chmod g+rw /etc/pki/tls/certs /etc/pki/tls/private \
-#	/var/log/apache2 /var/lock/apache2 /usr/local/apache2/htdocs/
-
+RUN chown root:root /etc/pki/tls/certs /etc/pki/tls/private \
+	/var/lib /var/log 
+RUN chmod g+rw /etc/pki/tls/certs /etc/pki/tls/private \
+	/var/lib /var/log 
 
 COPY start.sh /usr/local/bin
 RUN chmod 755 /usr/local/bin/start.sh
