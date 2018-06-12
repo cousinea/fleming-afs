@@ -27,4 +27,5 @@ ln -sf /secrets/httpd/httpd.conf /usr/local/apache2/conf/httpd.conf
 #drush @sites cc all --yes
 #drush up --no-backup --yes
 
-/usr/local/apache2/bin/apachectl start
+#/usr/local/apache2/bin/apachectl start
+/bin/bash "while true; do sleep 2; done"
