@@ -28,16 +28,16 @@ RUN yum reinstall -y UM-amazon-release
 
 RUN yum install -y UMwebPHP
 
-#COPY . /usr/local/apache2/htdocs/
+#COPY . /var/www/html 
 
 ### Section that sets up Apache and Cosign to run as non-root user.
 EXPOSE 8080
 EXPOSE 8443
 
 #### change directory owner and set perms, as openshift user is in root group.
-RUN chown -R root:root /etc/pki/tls/certs /etc/pki/tls/private \
+RUN chown -R root:root /etc/httpd /etc/pki/tls/certs /etc/pki/tls/private \
 	/var/lib /var/log 
-RUN chmod -R g+rw /var/lib /var/log 
+RUN chmod -R g+rw /etc/httpd /var/lib /var/log 
 
 COPY start.sh /usr/local/bin
 RUN chmod 755 /usr/local/bin/start.sh
