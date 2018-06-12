@@ -6,20 +6,27 @@ FROM RHEL7:latest
 #RUN updatedb
 
 RUN cd /etc/yum.repos.d/
+
 RUN yum update
+
 RUN yum-config-manager \
 	 --enable rhui-REGION-rhel-server-releases-optional
+
 RUN yum install -y wget
+
 RUN wget \
 	http://repos.fedorapeople.org/repos/jkaluza/httpd24/epel-httpd24.repo
+
 RUN yum install –y \
-	 https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+	 https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
 RUN yum install -y \
-	'https://s3-us-west-2.amazonaws.com/ee2yscfxg7wibgbczinrce7hs3s2ha23/kaf3e9nczq3hxmvch0tu03orpl32vm51/UM-amazon/release/6Server/x86_64/UM-amazon-release-1.0.0-1.el6.noarch.rpm'
+	'https://s3-us-west-2.amazonaws.com/ee2yscfxg7wibgbczinrce7hs3s2ha23/kaf3e9nczq3hxmvch0tu03orpl32vm51/UM-amazon/release/6Server/x86_64/UM-amazon-release-1.0.0-1.el7.noarch.rpm'
 
 RUN yum install httpd-cosign
+
 RUN yum reinstall UM-amazon-release
+
 RUN yum install UMwebPHP
 
 #COPY . /usr/local/apache2/htdocs/
