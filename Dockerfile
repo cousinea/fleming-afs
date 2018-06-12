@@ -3,6 +3,7 @@
 FROM centos:latest
 
 RUN cd /etc/yum.repos.d/
+RUN yum install wget
 RUN wget http://repos.fedorapeople.org/repos/jkaluza/httpd24/epel-httpd24.repo
 RUN yum install httpd24.x86_64
 
