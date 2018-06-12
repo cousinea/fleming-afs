@@ -5,6 +5,8 @@ FROM RHEL7:latest
 #RUN yum install -y mlocate
 #RUN updatedb
 
+COPY epel-release-latest-7.noarch.rpm /etc/yum.repos.d
+
 RUN cd /etc/yum.repos.d/
 
 RUN yum update
