@@ -2,8 +2,11 @@
 #FROM php:7-alpine
 FROM centos:latest
 
-RUN cd /etc/yum.repos.d/
-RUN yum update
+#RUN yum install -y mlocate
+#RUN updatedb
+
+#RUN cd /etc/yum.repos.d/
+#RUN yum update
 #RUN yum-config-manager \
 #	 --enable rhui-REGION-rhel-server-releases-optional
 #RUN yum install -y wget
@@ -35,8 +38,6 @@ EXPOSE 8443
 #RUN chmod g+rw /etc/pki/tls/certs /etc/pki/tls/private \
 #	/var/log/apache2 /var/lock/apache2 /usr/local/apache2/htdocs/
 
-#RUN yum install mlocate
-#RUN updatedb
 
 #COPY start.sh /usr/local/bin
 #RUN chmod 755 /usr/local/bin/start.sh

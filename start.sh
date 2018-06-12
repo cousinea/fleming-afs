@@ -14,10 +14,10 @@ ln -sf /secrets/httpd/httpd.conf /usr/local/apache2/conf/httpd.conf
 #ln -sf /secrets/ssl/AddTrustExternalCARoot.pem /etc/pki/tls/private/AddTrustExternalCARoot.pem
 #ln -sf /secrets/ssl/sha384-Intermediate-cert.pem /etc/pki/tls/private/sha384-Intermediate-cert.pem
 
-if [ -f /secrets/app/local.start.sh ]
-then
-  /bin/sh /secrets/app/local.start.sh
-fi
+#if [ -f /secrets/app/local.start.sh ]
+#then
+#  /bin/sh /secrets/app/local.start.sh
+#fi
 
 ## Rehash command needs to be run before starting apache.
 #c_rehash /etc/pki/tls/certs >/dev/null
