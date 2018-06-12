@@ -5,7 +5,7 @@
 #ln -sf /dev/stderr /usr/local/apache2/logs/error_log
 
 # apache and virtual host secrets
-ln -sf /secrets/httpd/httpd.conf /usr/local/apache2/conf/httpd.conf
+#ln -sf /secrets/httpd/httpd.conf /usr/local/apache2/conf/httpd.conf
 #ln -sf /secrets/apache2/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf
 #ln -sf /secrets/httpd/cosign.conf /usr/local/apache2/conf.d/cosign.conf
 
