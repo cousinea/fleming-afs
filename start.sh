@@ -28,4 +28,4 @@
 #drush up --no-backup --yes
 
 #/usr/local/apache2/bin/apachectl start
-/bin/bash "while true; do sleep 2; done"
+while true; do sleep 2; done
