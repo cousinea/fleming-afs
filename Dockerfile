@@ -16,7 +16,7 @@ RUN yum install -y \
 	'https://s3-us-west-2.amazonaws.com/ee2yscfxg7wibgbczinrce7hs3s2ha23/kaf3e9nczq3hxmvch0tu03orpl32vm51/UM-amazon/release/6Server/x86_64/UM-amazon-release-1.0.0-1.el6.noarch.rpm'
 
 RUN yum install httpd-cosign
-RUN yum reinstall UM-amazon-release
+#RUN yum reinstall UM-amazon-release
 RUN yum install UMwebPHP
 
 #COPY . /usr/local/apache2/htdocs/
