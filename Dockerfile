@@ -5,7 +5,7 @@ FROM centos:latest
 RUN cd /etc/yum.repos.d/
 RUN yum install -y wget
 RUN wget http://repos.fedorapeople.org/repos/jkaluza/httpd24/epel-httpd24.repo
-RUN yum install -y httpd24.x86_64
+#RUN yum install -y httpd24.x86_64
 
 #COPY . /usr/local/apache2/htdocs/
 
