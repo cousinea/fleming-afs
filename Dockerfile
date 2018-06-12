@@ -1,9 +1,4 @@
-#FROM httpd:latest
-#FROM php:7-alpine
 FROM RHEL7:latest
-
-#RUN yum install -y mlocate
-#RUN updatedb
 
 COPY epel-release-latest-7.noarch.rpm /etc/yum.repos.d
 
@@ -14,7 +9,7 @@ RUN yum update
 RUN yum-config-manager \
 	 --enable rhui-REGION-rhel-server-releases-optional
 
-RUN yum install -y wget
+RUN yum install -y httpd.x86_64 mlocate openssl.x86_64 wget
 
 RUN wget \
 	http://repos.fedorapeople.org/repos/jkaluza/httpd24/epel-httpd24.repo
