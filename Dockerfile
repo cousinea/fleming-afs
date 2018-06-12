@@ -24,7 +24,7 @@ RUN wget \
 RUN yum localinstall epel-release-latest-7.noarch.rpm 
 
 RUN yum install -y \
-	'https://s3-us-west-2.amazonaws.com/ee2yscfxg7wibgbczinrce7hs3s2ha23/kaf3e9nczq3hxmvch0tu03orpl32vm51/UM-amazon/release/6Server/x86_64/UM-amazon-release-1.0.0-1.el7.noarch.rpm'
+	'https://s3-us-west-2.amazonaws.com/ee2yscfxg7wibgbczinrce7hs3s2ha23/kaf3e9nczq3hxmvch0tu03orpl32vm51/UM-amazon/release/7Server/x86_64/UM-amazon-release-1.0.0-1.el7.noarch.rpm'
 
 RUN yum install httpd-cosign
 
