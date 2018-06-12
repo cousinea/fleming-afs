@@ -34,17 +34,10 @@ RUN yum install -y UMwebPHP
 EXPOSE 8080
 EXPOSE 8443
 
-#### change directory owner, as openshift user is in root group.
-#RUN mkdir -p /usr/local/apache2/htdocs/sites/default
-#RUN mkdir -p /usr/local/apache2/conf.d
-#RUN chown -R root:root /usr/local/apache2
-#RUN chmod -R g+w /usr/local/apache2
-	
-#### Modify perms for the openshift user, who is not root, but part of root group.
-RUN chown root:root /etc/pki/tls/certs /etc/pki/tls/private \
+#### change directory owner and set perms, as openshift user is in root group.
+RUN chown -R root:root /etc/pki/tls/certs /etc/pki/tls/private \
 	/var/lib /var/log 
-RUN chmod g+rw /etc/pki/tls/certs /etc/pki/tls/private \
-	/var/lib /var/log 
+RUN chmod -R g+rw /var/lib /var/log 
 
 COPY start.sh /usr/local/bin
 RUN chmod 755 /usr/local/bin/start.sh
