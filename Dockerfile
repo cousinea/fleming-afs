@@ -39,6 +39,9 @@ EXPOSE 8443
 RUN sudo chown -R root:root /etc/httpd /etc/pki/tls /var/lib /var/log/httpd /var/lib/mlocate
 RUN sudo chmod -R g+rw /etc/httpd /etc/pki/tls /var/lib /var/log/httpd /var/lib/mlocate
 
+RUN sudo chown -R root:root /var/log/httpd
+RUN sudo chmod -R g+rw /var/log/httpd 
+
 RUN sudo updatedb
 
 COPY start.sh /usr/local/bin
