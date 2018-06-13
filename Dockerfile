@@ -43,6 +43,10 @@ RUN sudo chmod -R g+rw /etc/httpd /etc/pki/tls /var/lib /var/log/httpd /var/lib/
 RUN sudo chown -R root:root /etc/httpd/conf.d /var/log/httpd /var/lib/mlocate
 RUN sudo chmod -R 777 /etc/httpd/conf.d /var/log/httpd /var/lib/mlocate
 
+## This works, when on a separate line
+RUN sudo chown -R root:root /etc/httpd/conf.d 
+RUN sudo chmod -R 777 /etc/httpd/conf.d 
+
 RUN sudo updatedb
 
 COPY start.sh /usr/local/bin
