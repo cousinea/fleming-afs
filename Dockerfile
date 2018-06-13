@@ -51,6 +51,9 @@ RUN sudo chmod -R 777 /etc/httpd/conf.d /var/log/httpd /var/lib/mlocate
 RUN sudo chown -R root:root /etc/httpd/conf.d 
 RUN sudo chmod -R 777 /etc/httpd/conf.d 
 
+RUN sudo chown -R root:root /run/httpd
+RUN sudo chmod -R g+w /run/httpd
+
 RUN sudo updatedb
 
 COPY start.sh /usr/local/bin
