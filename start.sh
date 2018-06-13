@@ -6,7 +6,6 @@ ln -sf /dev/stderr /var/log/httpd/error_log
 
 # apache and virtual host secrets
 ln -sf /secrets/httpd/httpd.conf /etc/httpd/conf/httpd.conf
-#ln -sf /secrets/apache2/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf
 #ln -sf /secrets/httpd/cosign.conf /usr/local/apache2/conf.d/cosign.conf
 
 # SSL secrets
