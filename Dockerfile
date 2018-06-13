@@ -35,12 +35,13 @@ COPY . /var/www/html
 EXPOSE 8080
 EXPOSE 8443
 
-#### change directory owner and set perms, as openshift user is in root group.
+### change directory owner and set perms, as openshift user is in root group.
 RUN sudo chown -R root:root /etc/httpd /etc/pki/tls /var/lib /var/log/httpd /var/lib/mlocate
 RUN sudo chmod -R g+rw /etc/httpd /etc/pki/tls /var/lib /var/log/httpd /var/lib/mlocate
 
-RUN sudo chown -R root:root /var/log/httpd /var/lib/mlocate
-RUN sudo chmod -R 777 /var/log/httpd /var/lib/mlocate
+## This works, when on a separate line
+RUN sudo chown -R root:root /etc/httpd/conf.d /var/log/httpd /var/lib/mlocate
+RUN sudo chmod -R 777 /etc/httpd/conf.d /var/log/httpd /var/lib/mlocate
 
 RUN sudo updatedb
 
