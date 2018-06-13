@@ -35,8 +35,7 @@ EXPOSE 8080
 EXPOSE 8443
 
 #### change directory owner and set perms, as openshift user is in root group.
-RUN chown -R root:root /etc/httpd /etc/pki/tls/certs /etc/pki/tls/private \
-	/var/lib /var/log 
+RUN chown -R root:root /etc/httpd /etc/pki/tls/certs /etc/pki/tls/private /var/lib /var/log 
 RUN chmod -R g+rw /etc/httpd /var/lib /var/log 
 
 COPY start.sh /usr/local/bin
