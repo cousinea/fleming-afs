@@ -36,8 +36,8 @@ EXPOSE 8080
 EXPOSE 8443
 
 #### change directory owner and set perms, as openshift user is in root group.
-RUN sudo chown -R root:root /etc/httpd /etc/pki/tls /var/lib /var/log/httpd /var/lib/mlocate/mlocate.db
-RUN sudo chmod -R g+rw /etc/httpd /etc/pki/tls /var/lib /var/log/httpd /var/lib/mlocate/mlocate.db
+RUN sudo chown -R root:root /etc/httpd /etc/pki/tls /var/lib /var/log/httpd /var/lib/mlocate
+RUN sudo chmod -R g+rw /etc/httpd /etc/pki/tls /var/lib /var/log/httpd /var/lib/mlocate
 
 RUN sudo updatedb
 
