@@ -2,10 +2,10 @@
 
 # Redirect logs to stdout and stderr for docker reasons.
 ln -sf /dev/stdout /var/log/httpd/access_log
-ln -sf /dev/stderr /var/log/httpd/access_log
+ln -sf /dev/stderr /var/log/httpd/error_log
 
 # apache and virtual host secrets
-ln -sf /secrets/httpd/httpd.conf /usr/local/apache2/conf/httpd.conf
+ln -sf /secrets/httpd/httpd.conf /etc/httpd/conf/httpd.conf
 #ln -sf /secrets/apache2/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf
 #ln -sf /secrets/httpd/cosign.conf /usr/local/apache2/conf.d/cosign.conf
 
