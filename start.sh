@@ -27,5 +27,6 @@ c_rehash /etc/pki/tls/certs >/dev/null
 #drush @sites cc all --yes
 #drush up --no-backup --yes
 
-#/usr/local/apache2/bin/apachectl start
-while true; do sleep 2; done
+#while true; do sleep 2; done
+
+/usr/sbin/httpd -DFOREGROUND -f "/etc/httpd/conf/httpd.conf"
