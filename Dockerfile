@@ -9,7 +9,7 @@ RUN yum update
 RUN yum-config-manager \
 	 --enable rhui-REGION-rhel-server-releases-optional
 
-RUN yum install -y httpd.x86_64 mlocate openssl.x86_64 wget
+RUN yum install -y httpd.x86_64 mlocate openssl.x86_64 wget which-2.20-7.el7.x86_64
 
 RUN wget \
 	http://repos.fedorapeople.org/repos/jkaluza/httpd24/epel-httpd24.repo
@@ -36,7 +36,7 @@ EXPOSE 8443
 
 #### change directory owner and set perms, as openshift user is in root group.
 RUN chown -R root:root /etc/httpd /etc/pki/tls/certs /etc/pki/tls/private /var/lib /var/log 
-RUN chmod -R g+rw /etc/httpd /var/lib /var/log 
+RUN chmod -R g+rw /etc/cron.daily /etc/httpd /var/lib /var/log 
 
 COPY start.sh /usr/local/bin
 RUN chmod 755 /usr/local/bin/start.sh
