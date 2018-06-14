@@ -35,7 +35,7 @@ EXPOSE 8443
 
 COPY . /var/www/html 
 
-##  
+###  
 RUN groupadd -r www-data
 RUN useradd -r -g www-data -s /sbin/nologin www-data
 RUN usermod -a -G root www-data
@@ -44,18 +44,19 @@ RUN usermod -a -G root www-data
 RUN sudo chown -R root:root /etc/httpd /etc/pki/tls /var/lib 
 RUN sudo chmod -R g+rw /etc/httpd /etc/pki/tls /var/lib 
 
-## This works, when on a separate line
-RUN sudo chown -R root:root /etc/httpd/conf.d /var/log/httpd 
-RUN sudo chmod -R g+rw /etc/httpd/conf.d /var/log/httpd 
+### This works, when on a separate line
+RUN sudo chown -R root:root /etc/httpd/conf.d /etc/httpd/logs
+RUN sudo chmod -R g+rw /etc/httpd/conf.d /etc/httpd/logs
 
-## This works, when on a separate line
-RUN sudo chown -R root:root /etc/httpd/conf.d 
-RUN sudo chmod -R g+rw /etc/httpd/conf.d 
+### This works, when on a separate line
+RUN sudo chown -R root:root /var/log/httpd 
+RUN sudo chmod -R g+rw /var/log/httpd 
 
+### This works, when on a separate line
 RUN sudo chown -R root:root /run/httpd
 RUN sudo chmod -R g+w /run/httpd
 
-RUN sudo updatedb
+#RUN sudo updatedb
 #RUN sudo chown -R root:slocate /var/lib/mlocate
 #RUN sudo chmod 777 /var/lib/mlocate
 
