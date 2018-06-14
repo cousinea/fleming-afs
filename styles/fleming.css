@@ -1,0 +1,484 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+@font-face {
+	font-family:'Antonio Light';
+	font-style:normal;
+	font-weight:normal;
+	src:url(/webfonts/antonio-light-webfont.eot);
+	src:url(/webfonts/antonio-light-webfont.eot?) format('eot'),url(/webfonts/antonio-light-webfont.woff) format('woff');
+}
+@font-face {
+	font-family:'Antonio';
+	font-style:normal;
+	font-weight:normal;
+	src:url(/webfonts/antonio-regular-webfont.eot);
+	src:url(/webfonts/antonio-regular-webfont.eot?) format('eot'),url(/webfonts/antonio-regular-webfont.woff) format('woff');
+}
+
+
+
+
+html {background-color:#eae9e5;font-family:Arial, Helvetica, sans-serif;min-width:320px;}
+
+a:hover {text-decoration:none;}
+
+strong {font-weight:bold;}
+
+sup {vertical-align:super;}
+
+hr {margin:15px 0 0px 0;}
+
+.footnote {font-size:10px;}
+
+
+/* Header styles */
+
+h1 {margin-top: 0;
+font-size: 32px;
+font-family: Antonio;
+font-weight: normal;
+/*letter-spacing: -.03em;*/
+color: #00274c;
+line-height: 125%;
+padding: 14px 0 12px 0;
+text-transform: uppercase;}
+
+h2 {font-size:16px;font-weight:bold;color:#333;margin:12px 0 8px 0;padding-top:15px;}
+
+h1 + h2 {padding-top:0px;}
+
+ul + h2 {margin-top:20px;}
+
+h3 {font-size:14px;font-weight:bold;color:#555;margin:20px 0 0 0;padding:3px 3px 3px 0;}
+
+h2 a {text-decoration:none;color:#000066;}
+
+h2 a:hover {text-decoration:underline;}
+
+
+/*This bit styles the first h1 on every page...*/
+
+.yui-g:first-child {padding-top:0;}
+
+
+
+
+/* Table styles */
+
+table {margin:12px 0 12px 0; border-collapse:collapse;}
+
+tr {}
+
+td {vertical-align:top;padding:5px;border:1px solid #6699cc;}
+
+th {padding:5px;color:#fff;font-weight:bold;background:url(http://fleming.bf.umich.edu/images/thbg.gif);background-repeat:repeat-x;background-position:bottom;background-color:#5078b5;border-left:1px solid #6699cc;font-size:14px;}
+
+
+
+
+
+/* Styles for the Locations of Key People tables */
+
+.keypeopletable {padding:10px;border:1px solid #6699cc;}
+
+.floorTbl {padding-top:0;margin-top:0;}
+
+
+
+
+/* List styles */
+
+ol {margin:5px 0 5px 15px;}
+
+ul {margin:5px 0 0 15px;}
+
+ol li {margin:15px 0 0 20px;list-style:decimal;}
+
+li>ol {margin-top:10px;}
+
+li>ol li {list-style:lower-alpha;margin-top:5px;}
+
+ul li {margin:10px 0 0 15px;list-style:disc;}
+
+li>ul {padding-top:0px;margin-top:0;}
+
+li>ul li {list-style:circle;padding-top:6px;margin-top:0;}
+
+li>ul li {margin-top:0;}
+
+#capsList li {list-style:upper-alpha;}
+
+#numList li {list-style:decimal;}
+
+#buriedul li {list-style:disc;}
+
+
+/* Banner styles */
+#banner {background:url(/images/block-m.png);background-repeat:no-repeat;background-position:32px 25px;cursor:pointer;text-decoration:none;padding-bottom:25px;min-height:154px;}
+
+#hd img {float:right;padding-right:32px;padding-top:33px;}
+
+#hd h1 {text-transform:uppercase;color:#e6e6e6;vertical-align:bottom;}
+
+
+/* Breadcrumbs (and h1's following the breadcrumbs div) */
+
+.breadcrumbs {font-size:10px;padding-top:10px;}
+
+.breadcrumbs a {padding:5px 3px 0 3px;}
+
+.breadcrumbs + h1 {padding-top:10px;}
+
+
+/*site container*/
+
+#bd {
+	/*pos:relative helps the left nav take up the whole height*/
+	position: relative;
+	background-color:#fff;
+	background-image:url(../fleming.png);
+	background-repeat:no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+}
+
+.secondwrap {margin-left:40px;margin-right:40px;
+-webkit-box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.29);
+-moz-box-shadow:    0px 0px 20px 0px rgba(50, 50, 50, 0.29);
+box-shadow:         0px 0px 20px 0px rgba(50, 50, 50, 0.29);
+/*box-shadow - it's faaaaaaaaantastic*/}
+
+.yui-t2 {background-color:#eae9e5;
+}
+
+.yui-g {padding:20px;margin-left:37px;background-color:#fff;
+/*need to cover the left nav height*/
+min-height:580px;
+}
+
+.toplink {text-align:right;font-size:11px;padding:10px 0 10px 0;}
+
+#banner {background-color:#00274c;}
+
+@-moz-document url-prefix() { #frontimgs {margin-bottom:220px;}}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {#frontimgs {margin-bottom:220px;}}
+
+#postdate {font-size:11px;font-style:italic;color:#666666;}
+
+#emphasis {background-color:#ffffcc;margin:30px 0 0 0;padding:5px 3px 5px 7px;border:2px solid #FFCC88;}
+
+#emphasis h1 {padding-top:0;margin-bottom:0;padding-bottom:0;}
+
+#emphasis p {margin-bottom:5px;padding-bottom:5px;font-size:14px;}
+
+.smaller {font-size:11px;}
+
+.button {padding:4px;}
+
+
+
+/* Footer style(s) */
+
+#ft {font-size:10px;color:#666666;padding:10px 0px 10px 0px;background-color:#eae9e5;border-top:1px solid #999;}
+
+
+
+
+/* Left Nav Styles */
+
+.yui-t2 .yui-b {width:230px;float:none;}
+
+#leftNav {
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+	background-repeat:no-repeat;
+	font-family:Antonio Light;
+	font-size:19px;
+	background-color:rgba(255, 255, 255, 0.8);
+	position: absolute;
+    height: 100%;
+}
+
+#leftNav ul {padding:18px 0px 0px 0px;list-style:none;margin:0;}
+
+#leftNav li {margin:0px;list-style:none;margin-left:0px;}
+
+#leftNav a {
+	text-decoration:none;
+	color:#000066;
+	font-weight:bold;
+	display: block;
+	text-transform:uppercase;
+	/*width:100%;*/
+	padding:10px 4px 10px 26px;}
+
+#leftNav li:hover {background:#00274c;}
+#leftNav li:hover a {color:#fff;}
+
+.new {font-size:12px;font-weight:bold;color:#B0171F;font-style:normal;font-family:Arial, Helvetica, sans-serif;}
+
+#leftNav ul li ul {
+	display:none;
+	position:absolute;
+	width:180px;
+	margin:0;
+	padding:0;
+	background:#2b5179;
+	font-size:.8em;
+	font-family:Arial,Helvetica,sans-serif;
+	text-transform:none;
+	z-index:8000;
+}
+
+
+.leftnavtext {padding-left:25px;}
+.leftnavtext h3 {color:#000066;font-size:14px;}
+.leftnavtext p {font-size:12px;font-family:Arial, Helvetica, sans-serif;padding-top:0;margin-top:0;}
+.leftnavtext a {padding-left:0 !important;text-transform:none !important;text-decoration:underline !important;}
+.leftnavtext a:hover {text-decoration:none !important;}
+
+/*copied left nav styles from CIO*/
+.mobilebutton {
+	display:none;
+}
+#leftNav .hasmore {background-image:url('/images/arrow-rt-blue.png');background-repeat:no-repeat;background-position:98% 48%;}
+#leftNav .hasmore:hover {background-image:url('/images/arrow-rt-white.png');background-repeat:no-repeat;background-position:98% 48%;}
+#leftNav ul li {
+	z-index:8000;
+}
+#leftNav ul li:hover ul {
+	display:block;
+	width:200px;
+	position:absolute;
+	left:230px;
+	margin-top:-43px;
+}
+
+#leftNav ul li ul li a {text-transform:capitalize;padding:9px 4px 10px 12px;}
+/*end copied styles*/
+
+
+
+
+
+
+/* Styles for the once-popular right nav */
+
+.rightNav {float:right;width:120px;margin:0 15px 0 15px;}
+
+.rightNavtext {border:1px solid #6699cc;padding:10px;margin:0 0 15px 0px;padding:10px;font-size:13px;font-weight:bold;color:#666;width:120px;}
+
+.rightNavtext ul {font-weight:normal;margin-top:10px;color:#000;font-size:12px;}
+
+.rightNavtext li {margin-bottom:10px;}
+
+.rightNavtext a {text-decoration:none;color:#000066;}
+
+.rightNavtext a:hover {text-decoration:underline;}
+
+
+
+
+/* Search Styles */
+
+
+#cse-search-results {width:200px;}
+
+#cse-search-box {padding-top:25px;padding-right:32px;margin-top:0;float:right;}
+
+#searchBar form {
+	float:right;
+	margin:0;
+	padding:0;
+}
+.searchBox {
+	float:left;
+	width:130px;
+	height:25px;
+	border:0;
+	border-radius:0;
+	-webkit-appearance:none;
+	-webkit-border-radius:0;
+	margin:0;
+	padding:0 0 0 5px;
+	font-size:.9em;
+	color:#666666;
+	line-height:25px;
+}
+.searchBtn {
+	margin:0;
+	padding:0;
+	padding-top:3px\9;
+	width:25px;
+	height:25px;
+	border:0;
+	border-radius:0;
+	-webkit-appearance:none;
+	-webkit-border-radius:0;
+	background:#ffcb05;
+	font-size:1em;
+	font-family:Antonio,'Arial Narrow';
+	font-weight:normal;
+	color:#00274c;
+}
+
+#searchitshome {border:none !important;padding:0 0 0 5px !important;}
+
+/* Blog comment styles */
+
+.comments {border:1px solid #6699cc;padding:5px;margin-bottom:10px;}
+
+/* Minor RSS styling... */
+
+#rssTbl {padding-bottom:0;margin:0 0 0 10px;}
+
+#rssTbl td {border:none;padding-left:0;margin-left:0;}
+
+
+/*then there were media queries....*/
+@media print {
+#searchbar {display:none;}
+#banner {display:none;}
+#hd {display:none;}
+#leftNav {display:none;}
+#sidr {display:none;}
+#bd {border:none;background-image:none;}
+.yui-t2 #yui-main .yui-b {margin-left:0 !important;}
+/*NOTE: Most of these styles were implemented to get http://fleming.bf.umich.edu/wellnessroom/guidelines.html to print on 2 pages in Chrome for the site owner - change with caution*/
+.secondwrap {margin-left:0px;margin-right:0px;
+-webkit-box-shadow:none;
+-moz-box-shadow:none;
+box-shadow:none;}
+body p {font-size:13px !important;}
+#numList {font-size:13px !important;}
+h1 {padding-bottom:0;}
+h2 {margin-top:0;}
+.breadcrumbs {display:none;}
+
+}
+
+@media all and (min-width: 550px) and (max-width: 730px) {
+#searchbar {display:block;float:none;}
+#hd img {width:60%}
+}
+
+@media all and (min-width: 550px) and (max-width: 700px) {
+#leftNav {padding:0;margin:0;width:190px;}
+#leftNav a {padding-left:20px;width:auto;}
+.yui-t2 #yui-main .yui-b {
+margin-left:170px;
+}
+#leftNav {padding:0;margin:0;width:175px;}
+.yui-g {margin-left: 0;min-height:700px;}
+}
+
+@media all and (min-width: 0px) and (max-width: 550px) {
+	#mobilemenu {
+		width:100%;
+		margin:0 auto 0 auto;
+	}
+	/*Listen, I don't like the width declaration below, either.*/
+	/*But it's the only way to have the entire .mobilebutton div be clickable.*/
+	/*Don't ask why - I have no idea.*/
+	#yui-main, .yui-g .yui-u .yui-g {width:inherit;}
+	.mobilebutton {
+		display:block !important;
+		margin:0;
+		padding:0 0 0 70px;
+		background:#40658f url('../images/icon-menu.png') 6% 48% no-repeat;
+		font-size:32px;
+		font-family:Antonio,'Arial Narrow',Arial;
+		text-transform:uppercase;
+		text-align:left;
+		text-decoration:none;
+		line-height:65px;
+		color:#ffffff;
+		cursor:pointer;
+	}
+	#leftNav {
+		display:none;
+		position:absolute;
+		z-index:99999;
+	}
+	#mobilemenu:hover #leftNav {
+/*		display:block;*/
+	}
+	#leftNav {
+		float:none;
+		width:auto;
+		margin:0 auto 0 40px;
+		padding:0;
+		text-align:left;
+		overflow:auto;
+	}
+	#leftNav ul {
+		font-family:Arial,Helvetica,sans-serif;
+		text-transform:none;
+	}
+	#leftNav ul li {
+		float:none !important;
+		margin:0;
+		padding:0;
+		line-height:50px;
+		z-index:8000;
+	}
+	#leftNav ul li a {
+	}
+	#leftNav ul li ul {
+		display:none;
+	}
+	#leftNav ul li:hover ul {
+		display:none !important;
+	}
+	.yui-g {margin-left:0;margin-top: 65px;}
+	.yui-t2 .yui-b {width:auto;}
+	.yui-t2 #yui-main .yui-b {margin-left:0;}
+}
+
+@media all and (min-width: 0px) and (max-width: 349px) {
+.mobilebutton {background-position:6% 48%;}
+}
+
+@media all and (min-width: 0px) and (max-width: 550px) {
+#searchbar {display:block;float:right;padding-top:30px;padding-right:0px;}
+#hd img {width:85%;float:none;padding-top:80px;padding-left:28px;}
+#banner {min-height:200px;}
+.secondwrap {margin-left:0;margin-right:0;}
+
+#leftNav {height:auto;overflow:hidden;background: #40658f;}
+#simple-menu {position:absolute;top:0;width:100%;}
+.mobilebutton {background-position:5% 38%;}
+#leftNav ul {padding-top:0;}
+#leftNav ul li {line-height:inherit;}
+#leftNav li a {margin:0;padding:12px;text-transform:uppercase;font-size:14px;color: #fff;font-family: Antonio,'Arial Narrow',Arial;font-size:19px;font-weight:normal;}
+#leftNav li a:hover {background:#6189b7;}
+
+#leftNav .hasmore {background-image:none;}
+#leftNav .hasmore:hover {background-image:none;}
+
+.leftnavtext {padding-left:15px;border-top:1px solid #fff;}
+.leftnavtext h3 {color:#fff;}
+.leftnavtext p {color:#fff;}
+.leftnavtext a {color:#fff !important;font-size:13px;}
+}
+
+/*kill some of the header padding/spacing on small screens*/
+@media all and (min-width: 0px) and (max-width: 430px) {
+#searchbar {float:none;padding-top:12px;padding-left:0px !important;}
+#banner {background-position: center 58px !important;min-height:inherit;padding-bottom:12px;
+}
+#searchbar {padding-left:19px;margin-left:auto;margin-right:auto;width: 160px;}
+#cse-search-box {padding-top:9px;padding-right:0px !important;float:none;}
+#banner {background-position: 19px 58px;}
+#hd img {padding-left:0px;padding-top:100px;margin-left:auto;margin-right:auto;float:right;}
+p, a, strong, li {font-size:16px !important}
+}
+/*Limited Availability section on rooms.html*/
+.lim {display:block;color:#333;font-style:italic;}
+
+.mainli {list-style:none;}
