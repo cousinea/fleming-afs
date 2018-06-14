@@ -28,4 +28,6 @@ c_rehash /etc/pki/tls/certs >/dev/null
 
 #while true; do sleep 2; done
 
+#systemctl start httpd.service || systemctl status httpd.service
+
 /usr/sbin/httpd -DFOREGROUND -f "/etc/httpd/conf/httpd.conf"
