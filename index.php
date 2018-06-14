@@ -3,7 +3,10 @@
 <html>
 <head>
    <title>Fleming Administration Building</title>
-   <?php include "includes/styles.html"; ?>
+   <?php 
+	error_reporting(-1);
+ini_set('display_errors', 'On');
+	include "includes/styles.html"; ?>
 
 <meta name="google-site-verification" content="tEledC-2d8ZP6VcvMy9maQKStyEB_ns__YSTnb1SR5g" />
 
