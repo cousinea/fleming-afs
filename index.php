@@ -142,10 +142,10 @@ echo "</ul>";
 </div>
 </div>
 	</div>
-	<? include "includes/flemingleft.html"; ?>
+	<?php include "includes/flemingleft.html"; ?>
 	
 	</div>
-<? include "includes/footer.html"; ?>
+<?php include "includes/footer.html"; ?>
 </div>
 </div>
 </body>
