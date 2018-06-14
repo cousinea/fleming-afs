@@ -6,12 +6,12 @@ ln -sf /dev/stderr /var/log/httpd/error_log
 
 # apache and virtual host secrets
 ln -sf /secrets/httpd/httpd.conf /etc/httpd/conf/httpd.conf
-#ln -sf /secrets/httpd/cosign.conf /usr/local/apache2/conf.d/cosign.conf
+#ln -sf /secrets/httpd/cosign.conf /etc/httpd/conf.d/cosign.conf
 
 # SSL secrets
-ln -sf /secrets/ssl/USERTrustRSACertificationAuthority.pem /etc/pki/tls/private/USERTrustRSACertificationAuthority.pem
-ln -sf /secrets/ssl/AddTrustExternalCARoot.pem /etc/pki/tls/private/AddTrustExternalCARoot.pem
-ln -sf /secrets/ssl/sha384-Intermediate-cert.pem /etc/pki/tls/private/sha384-Intermediate-cert.pem
+ln -sf /secrets/ssl/USERTrustRSACertificationAuthority.pem /etc/pki/tls/certs/USERTrustRSACertificationAuthority.pem
+ln -sf /secrets/ssl/AddTrustExternalCARoot.pem /etc/pki/tls/certs/AddTrustExternalCARoot.pem
+ln -sf /secrets/ssl/sha384-Intermediate-cert.pem /etc/pki/tls/certs/sha384-Intermediate-cert.pem
 
 if [ -f /secrets/app/local.start.sh ]
 then
