@@ -41,24 +41,23 @@ RUN useradd -r -g www-data -s /sbin/nologin www-data
 RUN usermod -a -G root www-data
 
 ### change directory owner and set perms, as openshift user is in root group.
-RUN sudo chown -R root:root /etc/httpd /etc/pki/tls /run/httpd /var/lib /var/log/httpd # /var/lib/mlocate
-RUN sudo chmod -R g+rw /etc/httpd /etc/pki/tls /run/httpd /var/lib /var/log/httpd # /var/lib/mlocate
-
-#RUN sudo chown -R root:slocate /var/lib/mlocate
-#RUN sudo chmod 777 /var/lib/mlocate
+RUN sudo chown -R root:root /etc/httpd /etc/pki/tls /var/lib 
+RUN sudo chmod -R g+rw /etc/httpd /etc/pki/tls /var/lib 
 
 ## This works, when on a separate line
-RUN sudo chown -R root:root /etc/httpd/conf.d /var/log/httpd /var/lib/mlocate
-RUN sudo chmod -R g+rw /etc/httpd/conf.d /var/log/httpd /var/lib/mlocate
+RUN sudo chown -R root:root /etc/httpd/conf.d /var/log/httpd 
+RUN sudo chmod -R g+rw /etc/httpd/conf.d /var/log/httpd 
 
 ## This works, when on a separate line
-#RUN sudo chown -R root:root /etc/httpd/conf.d 
-#RUN sudo chmod -R g+rw /etc/httpd/conf.d 
+RUN sudo chown -R root:root /etc/httpd/conf.d 
+RUN sudo chmod -R g+rw /etc/httpd/conf.d 
 
 RUN sudo chown -R root:root /run/httpd
 RUN sudo chmod -R g+w /run/httpd
 
 RUN sudo updatedb
+#RUN sudo chown -R root:slocate /var/lib/mlocate
+#RUN sudo chmod 777 /var/lib/mlocate
 
 COPY start.sh /usr/local/bin
 RUN chmod 755 /usr/local/bin/start.sh
