@@ -1,0 +1,73 @@
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+	$(".mobilebutton").click(function(){
+		$("#leftNav").slideToggle("");
+	});
+	$(window).resize(function(){
+		$("#leftNav").removeAttr("style");
+	});
+});
+
+
+function link() {}
+
+</script>
+
+
+<div id="simple-menu" class="mobilebutton">Site Menu</div>
+
+<div class="yui-b" id="leftNav" role="navigation">
+
+<div id="sidr">
+
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="http://fleming.bf.umich.edu/emergency.html">Emergency Protocol</a></li>
+<li class="hasmore"><a href="http://fleming.bf.umich.edu/mail.html">Mail</a>
+	<ul>
+    <li><a href="http://fleming.bf.umich.edu/mail.html">Mailroom Office Schedule</a></li>
+    <li><a href="http://fleming.bf.umich.edu/mail.html#protocol">Mail/Newspapers Protocol</a></li>
+    </ul></li>
+<li class="hasmore"><a href="http://fleming.bf.umich.edu/maintenance.html">Maintenance</a>
+	<ul>
+    <li><a href="/cleanit.html">Custodial Service (Get it Cleaned)</a></li>
+    <li><a href="/fixit.html">Facilities &amp; Operations (Get it Fixed)</a></li>
+    </ul></li>
+<li class="hasmore"><a href="http://fleming.bf.umich.edu/procedures.html">Procedures &amp; Guidelines</a>
+	<ul>
+		<li><a href="/building-access.html">Building Access &amp; Keys</a></li>
+		<li><a href="communication.html">Communication</a></li>
+		<li><a href="/property.html">Property</a></li>
+		<li><a href="/rooms.html">Rooms</a></li>
+		<li><a href="/solicitation.html">Solicitation</a></li>
+	</ul></li>
+<li><a href="http://fleming.bf.umich.edu/green.html">Sustainability</a></li>
+<li class="hasmore"><a href="http://fleming.bf.umich.edu/wellness.html">Wellness</a>
+	<ul>
+    	<li><a href="/wellnesscommittee/">Committee</a></li>
+        <li><a href="/video.html">Room</a></li>
+    </ul></li>
+    
+    
+
+<div class="leftnavtext">
+<h3><strong>Hours</strong></h3>
+<p>Monday - Friday 8am to 5pm<br />
+Saturday - Sunday Closed</p>
+
+<h3><strong>Contact</strong></h3>
+<p>April Fielek<br />
+Building Manager<br />
+3025 Fleming<br />
+(734) 615 5971</p>
+
+<p><a href="/directions.html">Directions</a></p>
+
+<p><a href="/departments.html">Departments in the Building</a></p>
+</div>    
+</ul>
+
+</div>
+</div>
