@@ -1,0 +1,238 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <title>Fleming Administration Building</title>
+   <!--#include virtual="/includes/styles.html"-->
+
+
+
+<script type="text/javascript" src="flvplayer/swfobject.js"></script>
+<script type="text/javascript" src="scripts/jquery.js"></script>
+
+<script type="text/javascript">
+
+var qstrs = new Array();
+
+qstrs[1] = "Welcome and introduction with Donald King - certified Health Fitness Specialist.";
+qstrs[2] = "Strength machine - Inspection";
+qstrs[3] = "Strength Machine - Push and pulling Station";
+qstrs[4] = "Strength machine - Strength and conditioning";
+qstrs[5] = "Strength machine - Cleaning equipment";
+qstrs[6] = "Bike";
+qstrs[7] = "Elliptical";
+qstrs[8] = "Treadmill";
+
+//takes the querystring and creates the embed code for the video.
+querystr = window.location.search.substring(1);
+var playervars = false;
+
+//Treadmill ending
+if (querystr == 8) {
+
+swfobject.embedSWF("http://fleming.bf.umich.edu/flvplayer/flvplayer.swf?contentpath=http://fleming.bf.umich.edu/video&preview=&video="+querystr+".flv&captions=&preroll=&autoplay=true&loop=&islive=&volume=&smoothing=true&autoscale=false&videowidth=454&videoheight=313&skincolor=0x696969&skinscalemaximum=&skin=skin-play-seek-fullscreen-vol.swf&preloader=&buttonoverlay=&ending=tread-ellipt-end.swf&debug=", "videoCanvas1", "450", "350", "9.0.28", "expressInstall.swf", playervars, { scale: "noscale", allowfullscreen: "true",salign: "tl", bgcolor: "#fff", base: "."},  { align: "center"});
+}
+
+
+//Bike and elliptical ending
+else if (querystr == 6 || querystr == 7) {
+
+swfobject.embedSWF("http://fleming.bf.umich.edu/flvplayer/flvplayer.swf?contentpath=http://fleming.bf.umich.edu/video&preview=&video="+querystr+".flv&captions=&preroll=&autoplay=true&loop=&islive=&volume=&smoothing=true&autoscale=false&videowidth=454&videoheight=313&skincolor=0x696969&skinscalemaximum=&skin=skin-play-seek-fullscreen-vol.swf&preloader=&buttonoverlay=&ending=elliptical-end.swf&debug=", "videoCanvas1", "450", "350", "9.0.28", "expressInstall.swf", playervars, { scale: "noscale", allowfullscreen: "true",salign: "tl", bgcolor: "#fff", base: "."},  { align: "center"});
+}
+
+
+//if the querystr is absent do nothing.
+else if (!querystr) {
+
+}
+
+
+
+else {
+swfobject.embedSWF("http://fleming.bf.umich.edu/flvplayer/flvplayer.swf?contentpath=http://fleming.bf.umich.edu/video&preview=&video="+querystr+".flv&captions=&preroll=&autoplay=true&loop=&islive=&volume=&smoothing=true&autoscale=false&videowidth=454&videoheight=313&skincolor=0x696969&skinscalemaximum=&skin=skin-play-seek-fullscreen-vol.swf&preloader=&buttonoverlay=&ending=&debug=", "videoCanvas1", "450", "350", "9.0.28", "expressInstall.swf", playervars, { scale: "noscale", allowfullscreen: "true",salign: "tl", bgcolor: "#fff", base: "."},  { align: "center"});
+}
+
+</script>
+
+<script>
+//Redirect if the querystring is out of bounds
+querystr = window.location.search.substring(1);
+
+if (querystr.length > 1) {
+document.write("<meta http-equiv='refresh' content='0;url=http://fleming.bf.umich.edu/video.html?1' />");}
+
+
+
+//JQuery to highlight the video td's on mouseover
+ $(document).ready(function(){
+
+  	//$("td[class^='vidcontainer']:odd").css("border-right", "15px solid #fff");
+
+    $("td[class^='vidcontainer']").hover(
+      function () {
+		x = $(this).attr("class");
+		$("."+x).css({'background-color' : '#ffffcc', 'text-decoration' : 'none'});
+		$("."+x+" a").css('text-decoration', 'none');
+      },
+      function () {
+		x = $(this).attr("class");
+		$("."+x).css({'background-color' : 'transparent', 'text-decoration' : 'underline'});
+		$("."+x+" a").css('text-decoration', 'underline');
+      }
+    );
+
+ });
+
+</script>
+
+<style>
+
+.vidleft {width:79px;}
+
+.vidright {vertical-align:middle;width:130px;}
+
+.vidtitle {padding-left:10px;}
+
+.td2 {padding-right:15px solid #fff;}
+
+
+/*dear god, this is terrible CSS, but I'm in a hurry, here and everything's inconsistent cross-browser except this... so sorry...*/
+#vidtable td {border-bottom:15px solid #fff;border-top:none;border-left:none;border-right:none;}
+
+</style>
+
+</head>
+<body>
+<div id="doc" class="yui-t2">
+<div class="secondwrap">
+   <!--#include virtual="includes/banner.html"-->
+   <div id="bd" role="main">
+	<div id="yui-main">
+	<div class="yui-b">
+    <div class="yui-g">
+
+<h1>Welcome to the Fleming Wellness Room</h1>
+
+<!--
+<div id="emphasis" style="margin:5px 0 15px 0;border-radius:3px;padding:12px;"><strong>Wellness Room Availability</strong>
+<br />The Fleming Wellness Room is unavailable for general use on Fridays from 12:15 to 1:00 pm, September 8 – December 9, 2016. This is due to MHealthy Circuit Training Classes.
+</div>
+-->
+
+<script>
+querystr = window.location.search.substring(1);
+querystr = parseInt(querystr);
+if (!querystr) {document.write("");}
+else if (querystr == 1) {document.write("<h2>Welcome</h2>");}
+else if(querystr == 2) {document.write("<h2>Safety Issues</h2>");}
+else if(querystr == 3) {document.write("<h2>Pushing and Pulling Station</h2>");}
+else if(querystr == 4) {document.write("<h2>Strength Training</h2>");}
+else if(querystr == 5) {document.write("<h2>Cleaning the Machines</h2>");}
+else if(querystr == 6) {document.write("<h2>Spinning Bike</h2>");}
+else if(querystr == 7) {document.write("<h2>Elliptical</h2>");}
+else if(querystr == 8) {document.write("<h2>Treadmill</h2>");}
+
+else {document.write("error!");}
+</script>
+
+
+
+<div id="videoCanvas1">
+<p>This <a href="http://www.video-flash.de/flv-flash-fullscreen-video-player/">Flash Video Player</a> requires the Adobe Flash Player.</p>
+<p><a href="http://www.adobe.com/go/getflashplayer" target="_blank">
+<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p>
+<br /><br />
+</div>
+
+
+
+
+<div id="vidcaption">
+<script>
+querystr = window.location.search.substring(1);
+querystr = parseInt(querystr);
+
+
+if (!querystr) {document.write("<style>#videoCanvas1 {display:none;}</style>The Wellness room is a resource to help promote greater health and wellness for all Fleming Administration Building staff. This is accomplished by offering a strength machine, stationary bike, treadmill and elliptical machines.<!--<h2>2018 Wellness Room Renewal Process -- Now Open</h2>--><h3>For access and to use the Wellness room please view and complete all the below requirements:</h3><ul><li>Read the <a href='/wellnessroom/guidelines.html'>2018 Fleming Wellness Room Guidelines</a></li><li>Watch the instructional videos:</li><ul><li><a href='http://fleming.bf.umich.edu/video.html?1'>Welcome and introduction with Donald King - certified Health Fitness Specialist</a></li><li><a href='http://fleming.bf.umich.edu/video.html?2'>Strength machine - Inspection</a></li><li><a href='http://fleming.bf.umich.edu/video.html?3'>Strength Machine - Push and pulling Station</a></li><li><a href='http://fleming.bf.umich.edu/video.html?4'>Strength machine - Strength and conditioning</a></li><li><a href='http://fleming.bf.umich.edu/video.html?5'>Strength machine - Cleaning equipment</a></li><li><a href='http://fleming.bf.umich.edu/video.html?6'>Bike</a></li><li><a href='http://fleming.bf.umich.edu/video.html?7'>Elliptical</a></li><li><a href='http://fleming.bf.umich.edu/video.html?8'>Treadmill</a></li></ul>");
+
+//for (i=1;i<=8;i++) {
+//	document.write("<li style='list-style:circle;margin-left:40px;'><a href='http://fleming.bf.umich.edu/video.html?"+i+"'>"+qstrs[i]+"</a></li>");}
+//</ul>
+
+document.write("<li>Fill out the <a href='https://fleming.bf.umich.edu/access-release.php'>Request for access &amp; Release of Liability</a>.</li><!--<li>Turn in signed form to the Fleming Building Manager in room 3025 or to the information/mailroom.</li>--><li>Confirmation of access to the Wellness room will be verified with returned copy of signed Request for access &amp; Release of Liability form and guidelines.  Please allow 48 hours for processing of door access.</li></ul>");
+
+//document.write("<h2>Locker Lottery</h2><p>The locker lottery will again be coordinated by the Fleming Wellness Committee.  For information on lockers please refer to the wellness room guidelines and submit your name to<a href='mailto:flemingwellnesschampions@umich.edu'> flemingwellnesschampions@umich.edu</a> <strong>no later than Dec. 12th</strong>.  All who submit a request will be notified by the Fleming Wellness Committee on Dec. 16th.  We also have transient lockers available for those that don’t receive a locker in the lottery.</p>");
+}
+
+
+else if (querystr == 1) {document.write("<br><br>Welcome and introduction with Donald King - certified Health Fitness Specialist.");}
+else if(querystr == 2) {document.write("<br><br>Ensuring the equipment is in proper condition.");}
+else if(querystr == 3) {document.write("<br><br>Using the pushing and pulling station.");}
+else if(querystr == 4) {document.write("<br><br>Using the strength and conditioning machine.");}
+else if(querystr == 5) {document.write("<br><br>Cleaning the equipment.");}
+else if(querystr == 6) {document.write("<br><br>Using the spinning bike.");}
+else if(querystr == 7) {document.write("<br><br>Using the elliptical.");}
+else if(querystr == 8) {document.write("<br><br>Using the Treadmill.");}
+
+else {document.write("<br><br>error!");}
+</script>
+
+
+
+
+<script>
+if (!querystr) {
+document.write("<style>#vidtable {display:none;}</style>");
+}
+
+else {document.write("<br><br><h2>Wellness Room Videos</h2>");}
+</script>
+
+<table id="vidtable">
+<tr>
+
+<ul>
+<script>
+querystr = window.location.search.substring(1);
+querystr = parseInt(querystr);
+var increm = 1;
+
+
+for (i=1;i<=8;i++)
+
+{
+
+if (i!=querystr)
+{
+document.write("<td class='vidcontainer"+i+"'><a href='http://fleming.bf.umich.edu/video.html?"+i+"'><img src='video/thumbs/"+i+".gif' alt='"+qstrs[i]+"' /></a></td><td class='vidcontainer"+i+"' style='padding-right:15px;'><div class='vidtitle'><a href='http://fleming.bf.umich.edu/video.html?"+i+"' id='vidLink'>"+qstrs[i]+"</a></div></td>");
+
+var halfincrem = increm % 2;
+
+if (halfincrem === 0)
+{
+document.write("</tr><tr>");
+}
+increm++;
+}
+
+}
+</script>
+</tr></table>
+
+
+
+
+
+</div>
+
+</div>
+</div>
+	</div>
+	<!--#include virtual="includes/flemingleft.html"-->
+
+	</div>
+<!--#include virtual="includes/footer.html"-->
+</div>
+</div>
+</body>
+</html>
