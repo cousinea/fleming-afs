@@ -41,20 +41,20 @@ RUN useradd -r -g www-data -s /sbin/nologin www-data
 RUN usermod -a -G root www-data
 
 ### change directory owner and set perms, as openshift user is in root group.
-RUN sudo chown -R root:root /etc/httpd /etc/pki/tls /var/lib 
-RUN sudo chmod -R g+rw /etc/httpd /etc/pki/tls /var/lib 
+#RUN sudo chown -R root:root /etc/httpd /etc/pki/tls /var/lib 
+#RUN sudo chmod -R g+rw /etc/httpd /etc/pki/tls /var/lib 
 
 ### This works, when on a separate line
-RUN sudo chown -R root:root /etc/httpd/conf.d /etc/httpd/logs
-RUN sudo chmod -R g+rw /etc/httpd/conf.d /etc/httpd/logs
+RUN sudo chown -R root:root /etc/httpd /etc/httpd/conf.d /etc/httpd/logs /etc/pki/tls /run/httpd /var/lib
+RUN sudo chmod -R g+rw /etc/httpd /etc/httpd/conf.d /etc/httpd/logs /etc/pki/tls /run/httpd /var/lib
 
 ### This works, when on a separate line
 RUN sudo chown -R root:root /var/log/httpd 
 RUN sudo chmod -R 777 /var/log/httpd 
 
 ### This works, when on a separate line
-RUN sudo chown -R root:root /run/httpd
-RUN sudo chmod -R g+w /run/httpd
+#RUN sudo chown -R root:root /run/httpd
+#RUN sudo chmod -R g+w /run/httpd
 
 #RUN sudo updatedb
 #RUN sudo chown -R root:slocate /var/lib/mlocate
